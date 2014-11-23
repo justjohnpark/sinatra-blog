@@ -1,0 +1,11 @@
+<label for="title">title</label>
+<input name="entry[title]" id="title" value='<%= @entry.title %>'>
+
+<label for="content">content</label>
+<br>
+<textarea name="entry[content]" id="content" rows="10"><%= @entry.content %></textarea>
+<br>
+<br>
+<label for="content">tags (separated by spaces)</label>
+<input name="entry[tags]" id="tags" value='<%= @tags %>'>
+

@@ -1,0 +1,7 @@
+<h1>Writers</h1>
+
+<ul>
+  <% @writers.each do |writer| %>
+    <li><a href='/users/<%= writer.id %>/entries'><%= writer.first_name %></a> <small><%= writer.entries.count %> posts</small></li>
+  <% end %>
+</ul>

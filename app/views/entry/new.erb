@@ -1,0 +1,10 @@
+<h1>New Entry</h1>
+
+<% if @error %>
+  <div class='wrap-center'><div class="error"><%= @error %></div></div>
+<% end %>
+
+<form action='/entries' method="POST" id="newpost">
+  <%= erb :"entry/_form" %>
+  <div class='wrap-center'><input class='btn' type="submit" value="create"></div>
+</form>

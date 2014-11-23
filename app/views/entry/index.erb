@@ -1,0 +1,11 @@
+<h1>Entries</h1>
+
+<% if logged_in? %>
+  <div class="wrap-center"><a href='/entries/new' class="btn">new</a></div>
+<% end %>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li><a href='/entries/<%= entry.id %>'><%= entry.title %></a> | <a class='author' href='/users/<%= entry.user.id %>/entries'><%= entry.user.first_name %></a></li>
+  <% end %>
+</ul>

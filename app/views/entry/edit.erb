@@ -1,0 +1,18 @@
+<h1>Edit entry <%= @entry.id %></h1>
+
+
+<% if @error %>
+  <div class='wrap-center'><div class="error"><%= @error %></div></div>
+<% end %>
+
+
+<form action="/entries/<%= @entry.id %>" method="POST">
+  <%= erb :"entry/_form" %>
+  <input type='hidden' name='_method' value='put'>
+  <div class='wrap-center'><input class='btn' type="submit" value="edit"></div>
+</form>
+
+<form action="/entries/<%= @entry.id %>" method="POST">
+  <div class='wrap-center'><input class='btn-danger' type='submit' value='delete'></div>
+  <input type='hidden' name='_method' value='delete'>
+</form>

@@ -1,0 +1,15 @@
+<h1><%= @entry.title %> <small>by <a href='/users/<%= @entry.user.id %>/entries'><%= @entry.user.first_name %></a></small></h1>
+
+<%= @entry.content %>
+
+
+<ul id="tags">
+  Tags:
+  <% @entry.tags.each do |tag| %>
+    <li><a href='/tags/<%= tag.id %>'><%= tag.content %></a></li>
+  <% end %>
+</ul>
+
+<% if logged_in? && @entry.user == @author %>
+  <div class='wrap-center'><a class='btn' href="/entries/<%= @entry.id %>/edit">edit</a></div>
+<% end %>
