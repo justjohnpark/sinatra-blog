@@ -1,6 +1,6 @@
-A simple blog made with Sinatra. 
+# A simple blog made with Sinatra. 
 
-Here are the features:
+## Here are the features:
 1. Show all entries
 2. Show a particular entry (by id)
 3. Create a new entry
@@ -8,7 +8,7 @@ Here are the features:
 5. Delete an existing entry
 6. Show all entries with a given tag.
 
-Instructions:
+## Instructions:
 clone this directory
 run 'bundle install' in the terminal from the root directory
 run 'be rake db:create' in the terminal from the root directory
